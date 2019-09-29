@@ -1,0 +1,3 @@
+/home/kx/ws_arbotix/src/demo/CMakeFiles/rebuild_cache.dir
+/home/kx/ws_arbotix/src/demo/CMakeFiles/edit_cache.dir
+/home/kx/ws_arbotix/src/demo/CMakeFiles/cloud_viewer.dir

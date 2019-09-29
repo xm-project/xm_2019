@@ -1,0 +1,5 @@
+<launch>
+<node pkg="xm_speech" name="isr_sample" type="isr_sample" respawn="true"/>
+<node pkg="xm_speech" name="tts_sample" type="tts_sample" respawn="true"/>
+<node pkg="xm_speech" name="xm_speech_demo" type="xm_speech_demo.py" output="screen" respawn="true"/>
+</launch>

@@ -1,0 +1,66 @@
+#BNF+IAT 1.0 UTF-8;
+/*
+Attention:
+1.the longer sentence,the more difficult to recognize,such as:how many in the dining room
+2.it's better to divide the sentence to smaller,such as:how many,in the,dining room
+3.the ruleExpansion is long,will be an error,such as:what was the last question
+4.#BNF+IAT VersionNumber CharEncoding must be in first line
+5.the sentence is shorter,the distance between voice and microphone is longer in the same volume
+*/
+
+!grammar speech;
+
+!slot <ArenaQ>;
+!slot <CrowdOperatorQ>;
+!slot <ObjectQ>;
+!slot <PredefinedQ>;
+
+!start <speak>;
+
+
+<speak>:<CrowdOperatorQ>|<ArenaQ>|<ObjectQ>|<PredefinedQ>;
+
+<CrowdOperatorQ>:
+"number of male people sitting"|
+"number of female people sitting"|
+"number of male people standing"|
+"number of female people standing"|
+"number of people standing"|
+"number of people sitting";
+
+<ArenaQ>:
+"How many bookshelf are in the living room"|
+"In which room is the fridge"|
+"How many doors has the Arena"|
+"In which room is the dining table"|
+"Where is located the bed"|
+"How many fireplace are in the bedroom"|
+"In which room is the sofa"|
+"Where is located the fridge"|
+"Where is located the cupboard"|
+"In which room is the bookshelf";
+
+<ObjectQ>:
+"how many hours in a day"|
+"how many season are there in one year"|
+"how many seconds in one minute"|
+"what is the world biggest island"|
+"what is the biggest province of china"|
+"how large is the area of china"|
+"Who was the first president of the USA"|
+"What is China's national animal"|
+"How many children did Queen Victoria have"|
+"What was the former name of New York";
+
+
+<PredefinedQ>:
+"How many people live in the Japan"|
+"what is the capital of the united states"|
+"what day is today"|
+"What city is the capital of the Japan"|
+"Where does the term computer bug come from"|
+"When was invented the B programming language"|
+"Who invented the C programming language"|
+"What is the highest point in Japan"|
+"What are the colours of the Japanese flag"|
+"Who invented the first compiler";

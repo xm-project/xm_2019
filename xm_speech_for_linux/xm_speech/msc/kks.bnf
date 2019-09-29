@@ -1,0 +1,12 @@
+﻿#BNF+IAT 1.0 UTF-8;
+!grammar which;
+!slot <who>;
+!slot <be>;
+!slot <contact>;
+
+!start <which>;
+<which>:[<who>]<be><contact>;
+<who>:我|你|他|我们|你们|他们;
+<be>:是|不是;
+<contact>:张伟|张伟伟;
+

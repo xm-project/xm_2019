@@ -1,0 +1,25 @@
+#BNF+IAT 1.0 UTF-8;
+/*
+Attention:
+1.the longer sentence,the more difficult to recognize,such as:how many in the dining room
+2.it's better to divide the sentence to smaller,such as:how many,in the,dining room
+3.the ruleExpansion is long,will be an error,such as:what was the last question
+4.#BNF+IAT VersionNumber CharEncoding must be in first line
+5.the sentence is shorter,the distance between voice and microphone is longer in the same volume
+*/
+
+!grammar speech;
+!slot <HelpMeCarry>;
+!start <speak>;
+
+<speak>:<HelpMeCarry>;
+
+<HelpMeCarry>:
+"follow me"|
+"stop here now"|
+"take this Basket to the kitchen "|
+"take this Basket to the livingroom "|
+"take this Basket to the diningroom "|
+"take this Basket to the bedroom "|
+"you are right"|
+"no";

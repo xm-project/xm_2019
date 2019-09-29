@@ -1,0 +1,59 @@
+#BNF+IAT 1.0 UTF-8;
+!grammar question;
+!slot <Q>;
+
+!start <Q>;
+
+<Q>:
+"Which German Count invented the zeppelin"|
+"Who was the first president of the USA"|
+"In ancient China what meat was reserved for the Emperor"|
+"In which city was the Titanic built"|
+"How many children did Queen Victoria have"|
+"Which French king was called the Sun King"|
+"What was in England the northern frontier of the Roman Empire"|
+"In which 1979 film was the spaceship called Nostromo"|
+"Who was the first king of Belgium "|
+"What was the former name of New York"|
+"What was the Latin name of Paris in Roman times"|
+"Which city was the capital of Australia from 1901 to 1927"|
+"Give another name for the study of fossils"|
+"What do dragonflies prefer to eat"|
+"Which insects cannot fly, but can jump higher than 30 centimeters"|
+"What is the name of the European Bison"|
+"What is called a fish with a snake-like body"|
+"Which plant does the Canadian flag contain"|
+"Which is the largest species of the tiger"|
+"Which malformation did Marilyn Monroe have when she was born"|
+"What is the house number of the Simpsons"|
+"What dog in ancient China was restricted to the aristocracy"|
+"Who is the director of Reservoir Dogs"|
+"What number is on Herbie the beatle"|
+"Give the name of the best James Bond parody"|
+"What is the name of the bald commander of the Enterprise in Star Trek"|
+"Who was the leading actress in Sister act 1 en 2 "|
+"What is the country top-level domain of Belgium"|
+"Which unit is an indication for the sound quality of MP3"|
+"In computing what is Ram short for"|
+"Who was the first man to fly around the earth with a spaceship"|
+"On which hemisphere were the most dinosaur skeletons found"|
+"What color is cobalt"|
+"Who invented vulcanized rubber"|
+"Which device do we use to look at the stars"|
+"Which unit indicates the light intensity"|
+"Who invented the barometer"|
+"Who was the first American in space"|
+"Two brothers invented the hot air balloon. What was their surname"|
+"Who was the inventor of the steam engine"|
+"Which device was invented by Henry Mill"|
+"What is the lightest existing metal"|
+"What are the three primary colors"|
+"Which planet is nearest the sun"|
+"How long is the Great Wall of China"|
+"What is the largest number of five digits"|
+"What is the most fractured human bone"|
+"Which South American country is named after Venice"|
+"How many stars feature on the flag of New Zealand"|
+"What colour to do you get when you mix red and white"|
+"you are right";
+

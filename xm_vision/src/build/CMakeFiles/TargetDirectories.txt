@@ -1,0 +1,3 @@
+/home/domistic/catkin_ws/src/xm_vision/src/build/CMakeFiles/edit_cache.dir
+/home/domistic/catkin_ws/src/xm_vision/src/build/CMakeFiles/rebuild_cache.dir
+/home/domistic/catkin_ws/src/xm_vision/src/build/CMakeFiles/Gender.dir

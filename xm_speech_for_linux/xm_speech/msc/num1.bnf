@@ -1,0 +1,11 @@
+#BNF+IAT 1.0 UTF-8;
+!grammar num1;
+!slot <who>;
+!slot <be>;
+!slot <contact>;
+
+!start <which>;
+<which>:[<who>]<be><contact>;
+<who>:i|you|he|she|we|they;
+<be>:am|are|is;
+<contact>:john|sam;

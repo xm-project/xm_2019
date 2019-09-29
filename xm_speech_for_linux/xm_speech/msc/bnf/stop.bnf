@@ -1,0 +1,7 @@
+#BNF+IAT 1.0 UTF-8;
+!grammar stop;
+!start <stop>;
+
+<stop>:"you can stop here"|"you are right";
+
+

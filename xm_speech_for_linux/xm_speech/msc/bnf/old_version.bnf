@@ -1,0 +1,61 @@
+#BNF+IAT 1.0 UTF-8;
+/*
+Attention:
+1.the longer sentence,the more difficult to recognize,such as:how many in the dining room
+2.it's better to divide the sentence to smaller,such as:how many,in the,dining room
+3.the ruleExpansion is long,will be an error,such as:what was the last question
+4.#BNF+IAT VersionNumber CharEncoding must be in first line
+5.the sentence is shorter,the distance between voice and microphone will be longer in the same volume
+6.the num of rule |,such as:<rule0>|<rule1>|<rule2> is OK,too many is illegal
+*/
+
+!grammar speech;
+!slot <Q>;
+
+!start <speak>;
+
+<speak>:<GPSR>|<YesOrNo>|<Q>|<didi>;
+
+<GPSR>:
+<findprs>" in "<room>" and "<talk>|       //find/look for/search for somebody in someplace and answer a question
+<goroom>" and "<findobj>" and go back here"|                //go to/reach/navigate to someplace and find/look for/search for something and go back here
+"take " <object> " from " <room>" and go back here";            //take something from someplace and go back here
+
+<goroom>:<vbgoto>" the "<room>;
+<vbgoto>:"go to"|"navigate to"|"reach";
+<room>:" kitchen "|" livingroom "|" bedroom "|" diningroom ";
+
+<findprs>:<vbfind><personname>;
+<personname>:" Tom "|" Paul "|" Green "|" Kevin "|" Tracy "|" John "|" Angel "|" Jamie "|" Fisher "|" Shirley "|" Robin "|" Daniel ";
+
+<findobj>:<vbfind><object>;
+<vbfind>:" find "|" look for "|" search for "|" grasp ";
+<talk>:" answer a question";
+
+<object>:<drinks>|<cleaningstuff>|<food>;
+
+<drinks>:" cola "|" coffee "|" water "|" milk "|" cake "|" oreo ";
+<food>:" noodles "|" biscuit "|" chips ";
+<cleaningstuff>:" rollpaper "|" toothpaste "|" soap ";
+
+
+
+<YesOrNo>:
+"you are right"|
+"no";
+
+<Q>:
+"what is the capital of china"|
+"how many hours in a day"|
+"how many season are there in one year"|
+"how many seconds in one minute"|
+"what is the world biggest island"|
+"what is the biggest province of china"|
+"how large is the area of china"|
+"who was the first president of the usa"|
+"what is china's national animal"|
+"how many children did queen victoria have"|
+"what was the former name of new york";
+
+<didi>:
+"stop here now";

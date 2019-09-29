@@ -1,0 +1,35 @@
+#BNF+IAT 1.0 UTF-8;
+/*
+Attention:
+1.the longer sentence,the more difficult to recognize,such as:how many in the dining room
+2.it's better to divide the sentence to smaller,such as:how many,in the,dining room
+3.the ruleExpansion is long,will be an error,such as:what was the last question
+4.#BNF+IAT VersionNumber CharEncoding must be in first line
+5.the sentence is shorter,the distance between voice and microphone will be longer in the same volume
+6.the num of rule |,such as:<rule0>|<rule1>|<rule2> is OK,too many is illegal
+*/
+
+!grammar speech;
+!start <speak>;
+
+<speak>:<Shopping>|<YesOrNo>|<Get>|<follow>|<stop>;
+
+<Shopping>:
+" I need "[" a "]<object>" on the "<direction>|" I need "[" a "]<object>" in front of you";
+
+<follow>:
+"follow me";
+
+<Get>:"I want to get "<object>;
+
+<object>:"Bath cream"|"Milk tea"|"Biscuits"|"Chips"|"Napkin"|"Oreo"|"Green tea"|"Pepsi"|"Herbal tea"|"Porridge"|"Jelly";
+
+<YesOrNo>:"you are right"|"no";
+
+<direction>:"right"|"left";
+
+<stop>:"you can stop here";
+
+
+
+

@@ -1,0 +1,6 @@
+<launch>
+<node name ="1" type="tfp2.py" pkg = "tf_l">
+</node>
+<node name ="2" type="tfp2_.py" pkg = "tf_l">
+</node>
+</launch>

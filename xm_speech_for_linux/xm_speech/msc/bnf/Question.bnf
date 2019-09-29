@@ -1,0 +1,81 @@
+#BNF+IAT 1.0 UTF-8;
+/*
+Attention:
+1.the longer sentence,the more difficult to recognize,such as:how many in the dining room
+2.it's better to divide the sentence to smaller,such as:how many,in the,dining room
+3.the ruleExpansion is long,will be an error,such as:what was the last question
+4.#BNF+IAT VersionNumber CharEncoding must be in first line
+5.the sentence is shorter,the distance between voice and microphone is longer in the same volume
+*/
+
+!grammar speech;
+
+!slot <ArenaQ>;
+!slot <CrowdOperatorQ>;
+!slot <ObjectQ>;
+!slot <PredefinedQ>;
+
+!start <speak>;
+
+<speak>:<CrowdOperatorQ>|<ArenaQ>|<ObjectQ>|<PredefinedQ>;
+
+<CrowdOperatorQ>:
+"number of male people sitting"|
+"number of female people sitting"|
+"number of male people standing"|
+"number of female people standing"|
+"number of people standing"|
+"number of people sitting"|
+"Am I a man or a woman"|
+"what is the number of the people who waving arms"|
+"what is the number of the people who standing"|
+"what is the number of the people who sitting";
+
+<ArenaQ>:
+"where is the sofa"|
+"where is the chair"|
+"where is the table"|
+"where is the tvtable"|
+"where is the shelf"|
+"where is the plant"|
+"How many chairs are in the dining room"|
+"where can i find the drink"|
+"where can i find the food"|
+"where can i find the bed";
+
+<ObjectQ>:
+"What's the smallest food"|
+"What's the lightest drink";
+
+<PredefinedQ>:
+"Who's the most handsome person in Canada"|
+"How many time zones are there in Canada"|
+"What's the longest street in the world"|
+"Where was the Blackberry Smartphone developed"|
+"What is the world's largest coin"|
+"In what year was Canada invaded by the USA for the first time"|
+"What year was Canada invaded by the USA for the second time"|
+"What country holds the record for the most gold medals at the Winter Olympics"|
+"When was The Mounted Police formed"|
+"When was The Royal Canadian Mounted Police formed"|
+"Where is Canada's only desert"|
+"How big is Canada's only desert"|
+"What is a nanobot"|
+"How small can a nanobot be"|
+"Which was the first computer with a hard disk drive"|
+"When was the first computer with a hard disk drive launched"|
+"How big was the first hard disk drive"|
+"What was the first computer bug"|
+"What is a Mechanical Knight"|
+"What is the AI knowledge engineering bottleneck"|
+"What is a chatbot"|
+"Are self-driving cars safe"|
+"Who invented the compiler"|
+"Who created the C Programming Language"|
+"Who created the Python Programming Language"|
+"Is Mark Zuckerberg a robot"|
+"Who is the inventor of the Apple I microcomputer"|
+"Who is considered to be the first computer programmer"|
+"Which program do Jedi use to open PDF files"|
+"What day is today"|
+"In which year was RoboCup Home founded";
